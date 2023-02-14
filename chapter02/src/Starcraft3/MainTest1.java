@@ -20,7 +20,7 @@ public class MainTest1 {
 		
 		
 		zealot1.attack(marine2);
-		System.out.println(marine1.gethp());
+		//System.out.println(marine1.gethp());
 		zealot1.showInfo();
 		marine1.showInfo();
 		marine2.showInfo();

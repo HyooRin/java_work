@@ -62,12 +62,12 @@ public class BookMainTest1 {
 		// 인덱스 3번에 값을 삭제해주세요
 		books[3] = null;
 		
-		for (int i = 0;  i < books.length; i++) {
-			// i 값 활용 !!
-			if(books[i] != null) {
-			books[i].showInfo();
-			}
-		}
+//		for (int i = 0;  i < books.length; i++) {
+//			// i 값 활용 !!
+//			if(books[i] != null) {
+//			books[i].showInfo();
+//			}
+//		}
 			
 		}
 		

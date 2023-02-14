@@ -38,9 +38,7 @@ class Person {
 	
 	public void showInfo() {
 		System.out.println("이름: " + name + ", 나이:" + age);
-		
 	}
-
 }// end of Person class
 
 // xx.java 하나의 파일 안에 여러 개의 클래스를 작성할 수 있다.
@@ -54,7 +52,5 @@ class PersonMainTest{
 		person1.showInfo();
 		
 	}// end of main
-	
-	
 	
 }// end of PersonMainTest class

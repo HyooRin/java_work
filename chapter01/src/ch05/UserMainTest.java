@@ -9,7 +9,7 @@ public class UserMainTest {
 		
 		//Scanner scanner = new Scanner(System.in);
 		
-		int userinput1 = scanner.nextInt();
+		//int userinput1 = scanner.nextInt();
 		
 		// 200 + 엔터
 		
@@ -24,8 +24,8 @@ public class UserMainTest {
 		//scanner.nextLine(); // <-- 엔터키 소화
 		
 		System.out.println("이름을 입력해주세요");
-		String name = scanner.nextLine();
-		System.out.println("name" + name );
+		//String name = scanner.nextLine();
+		//System.out.println("name" + name );
 		
 		// 스캐너를 활용해서 값을 입력 받고 화면에 뿌려주세요
 		
@@ -49,8 +49,8 @@ public class UserMainTest {
 		User u1 = new User();
 		u1.name = "효린";
 		u1.haircolor = "Black";
-		u1.height = 163;
-		u1.weight = 55;
+		//u1.height = 163;
+		//u1.weight = 55;
 		u1.phoneNumber = "01022658611";
 		
 		Scanner scanner = new Scanner(System.in);

@@ -27,9 +27,7 @@ public class FruitMainTest {
 				String origin = ((Banana)fruits[i]).origin;
 				System.out.println("바나나 원산지" + origin);
 			}
-
-
-			
+		
 		}
 
 	}

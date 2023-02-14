@@ -12,7 +12,6 @@ public class Bank {
 	public void deposit(int money) {
 		balance += money;
 		showInfo();
-		
 	}
 	// 출금하다.
 	public void withdraw(int money) {

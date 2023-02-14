@@ -14,10 +14,5 @@ public class MainTest1 {
 		bankA.name = "홍길동";
 		// name 접근 제어 지시자는 public 이기 때문에 
 		// 같은 프로젝트 언어라면 어디서든지 접근 가능하다.
-		
-
-		
-
 	}
-
 }

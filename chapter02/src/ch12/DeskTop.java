@@ -13,7 +13,5 @@ public class DeskTop extends Computer {
 		System.out.println("타이핑하다");
 		
 	}
-	
-
 
 }

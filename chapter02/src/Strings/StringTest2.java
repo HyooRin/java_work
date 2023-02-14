@@ -31,9 +31,7 @@ public class StringTest2 {
 		// 가, 나 , a, 가 다 마 아  <------- 계속 상수 풀 영역에 메모리를 사용한다.
 		// 그래서 메모리를 효율적으로 사용하기 위해서는 
 		// StringBuilder 클래스와, StringButter 클래스를 알아야 한다. 
-		
-		
-
+	
 	}// end of main
 
 }// end of class

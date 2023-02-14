@@ -22,7 +22,7 @@ public class BankMainTest1 {
 		// set 메서드 사용해보기 
 		bankB.setBalance(-200_000);
 		bankB.showInfo();
-
+		
 	}// end of main
-
+	
 }// end of class

@@ -16,9 +16,5 @@ public class Human extends Animal {
 		System.out.println("휴먼이 사냥을 합니다.");
 		
 	}
-	
-
-
-	
 
 }

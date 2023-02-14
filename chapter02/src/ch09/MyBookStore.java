@@ -62,6 +62,23 @@ public class MyBookStore {
 		}
 
 	}// end of main
+	
+	// 저장하기
+	public static int save( Scanner scanner, Book[] books, int lastIndexNumber) {
+
+		System.out.println("저장하기");
+		System.out.println("책제목을 입력하세요");
+		String bookTitle = scanner.nextLine();
+		System.out.println("저자이름을 입력하세요");
+		String bookAuthor = scanner.nextLine();
+		Book book = new Book(bookTitle, bookAuthor);
+		books[lastIndexNumber] = book;
+		lastIndexNumber++;
+		System.out.println(bookTitle + "책을 저장했어요~");
+		return lastIndexNumber;
+
+	
+	}
 
 	// 전체 조회하기 기능
 	public static void readAll(Book[] books) {
@@ -112,22 +129,7 @@ public class MyBookStore {
 	
 
 
-	// 저장하기
-	public static int save( Scanner scanner, Book[] books, int lastIndexNumber) {
 
-		System.out.println("저장하기");
-		System.out.println("책제목을 입력하세요");
-		String bookTitle = scanner.nextLine();
-		System.out.println("저자이름을 입력하세요");
-		String bookAuthor = scanner.nextLine();
-		Book book = new Book(bookTitle, bookAuthor);
-		books[lastIndexNumber] = book;
-		lastIndexNumber++;
-		System.out.println(bookTitle + "책을 저장했어요~");
-		return lastIndexNumber;
-
-	
-	}
 } // end of main
 
 }// end of class

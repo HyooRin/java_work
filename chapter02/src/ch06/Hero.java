@@ -4,7 +4,7 @@ public class Hero {
 	private String name;
 	private int hp;
 	private int power;
-	private boolean defense;
+	private double defense;
 	private boolean die; // boolean -- get,set -->is 라 쓰는게 일반적이다.
 	
 	// getter 메서드 직접 만들어 보세요 5개
@@ -17,11 +17,11 @@ public class Hero {
 	public int getpower() {
 		return this.power;
 	}
-	public boolean getdefense() {
-		return this.defense;
+	public double getdefense() {
+		return defense;
 	}
-	public boolean getdie() {
-		return this.die;
+	public boolean isDie() {
+		return die;
 	}
 	
 	// setter 메서드 직접 만들어 보세요 5개
@@ -34,5 +34,16 @@ public class Hero {
 		}
 	}
 	
-
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	public void setDefense(double defense) {
+		this.defense = defense;
+	}
+	public void setDie(boolean die) {
+		this.die = die;
+	}
 }
