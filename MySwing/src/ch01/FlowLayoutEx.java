@@ -23,8 +23,7 @@ public class FlowLayoutEx  extends JFrame{
 		// 순서 중요!!!!!!!!!!!!  ->  NullPointException
 		initData();
 		setInitLayout();
-		
-			
+
 	}
 	
 	public void initData() {
@@ -57,8 +56,7 @@ public class FlowLayoutEx  extends JFrame{
 	// 코드테스트 
 	public static void main(String[] args) {
 		new FlowLayoutEx();
-		
-		
+
 	}
 
 }

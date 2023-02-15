@@ -30,7 +30,7 @@ public class NoLayoutEx1 extends JFrame {
 	}
 	private void setInitLayout() {
 		setLayout(null); // 좌표기반으로 컴포넌트를 배치해야한다. 
-		// 좌표 기반으로 세팅을 하면 각 컴포넌트에 크기르 지정해주어야한다. 기본값은 0 이다. !! 
+		// 좌표 기반으로 세팅을 하면 각 컴포넌트에 크기를 지정해주어야한다. 기본값은 0 이다. !! 
 		button1.setLocation(100, 100);
 		add(button1);
 		button2.setLocation(200, 150);

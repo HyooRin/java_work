@@ -10,8 +10,7 @@ public class FlowLayoutEx2 extends JFrame{
 	// 1단계 JButton 2개 생성
 	// 배치 관리자 FlowLayout 멤버 변수로 선언
 	// 화면에 Component 를 그려 주세요 
-	
-	
+
 	// 배열
 	private JButton button1;
 	private JButton button2;
@@ -22,14 +21,11 @@ public class FlowLayoutEx2 extends JFrame{
 	
 	
 	private FlowLayout flowLayout;
-	
-	
 
 	public FlowLayoutEx2() {
 		initData();
 		setInitLayout();
-		
-		
+
 	}
 	
 	private void initData() {
@@ -55,8 +51,7 @@ public class FlowLayoutEx2 extends JFrame{
 		add(button4);
 		add(button5);
 		add(button6);
-		
-	
+
 	}
 	public static void main(String[] args) {
 		new FlowLayoutEx2();

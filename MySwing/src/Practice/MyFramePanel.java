@@ -1,4 +1,4 @@
-package ch02;
+package Practice;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -17,56 +17,48 @@ public class MyFramePanel extends JFrame{
 	private JButton button5;
 	private JButton button6;
 	
-	// 패널 : 컴포넌트 그룹화 시킬 수 있다. 즉 각각에 배치관리자를 지정할 수 있다.
+	// 패널 : 컴포넌트 그룹화 시킬 수 있다. 즉 각각의 배치관리자를 지정할 수 있다.
 	private JPanel panel1;
-	private JPanel panel2;
+	private JPanel panel2;	
 	
 	public MyFramePanel() {
 		initData();
 		setInitLayout();
+	
 	}
 	
 	private void initData() {
 		setTitle("패널추가연습");
 		setSize(600, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		panel1 =new JPanel();
-		panel1.setBackground(Color.red);
-		panel2 =new JPanel();
+		panel1 = new JPanel();
+		panel1.setBackground(Color.red);		
+		panel2 = new JPanel();
 		panel2.setBackground(Color.yellow);
 		
-		// 버튼 초기화
 		button1 = new JButton("button1");
-		//button1.setSize(100, 50);
 		button2 = new JButton("button2");
-		//button2.setSize(100, 50);
 		button3 = new JButton("button3");
-		//button3.setSize(100, 50);
 		button4 = new JButton("button4");
 		button5 = new JButton("button5");
 		button6 = new JButton("button6");
-		
+
 	}
 	private void setInitLayout() {
 		add(panel1, BorderLayout.CENTER);
-		add(panel2, BorderLayout.SOUTH);		
-		// 루트 패널 기본 레이아웃 BorderLayout 이다.
-		// 하지만 추가적으로 만들어 사용하는 Panel 은 기본 레이아웃이 FlowLayout이다.
-		//setLayout(null);
-		
-		panel1.add(button1);
+		add(panel2, BorderLayout.SOUTH);
+		// 루트패널 기본 레이아웃 BorderLayout 이다.
+		// 하지만 추가적으로 만들어 사용하는 Panel 은 기본 레이아웃이 FLowLayout 이다. 
+		//panel1.setLayout(null);
+		panel1.add(button1);		
 		panel1.add(button2);
 		panel1.add(button3);
 		panel1.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 		
-		//panel1.setLayout(null);
-		//button1.setLocation(0, 0);
-		//button2.setLocation(100, 0);
-		//button3.setLocation(200, 0);
 		panel2.add(button4);
 		panel2.add(button5);
 		panel2.add(button6);
-		panel2.setLayout(new FlowLayout(FlowLayout.RIGHT,0,0));
+		panel2.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 0));
 		
 		setVisible(true);
 		
@@ -74,9 +66,6 @@ public class MyFramePanel extends JFrame{
 	
 	public static void main(String[] args) {
 		new MyFramePanel();
-		
 	}
-	
-	
 
 }

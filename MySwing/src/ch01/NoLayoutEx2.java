@@ -46,8 +46,6 @@ public class NoLayoutEx2 extends JFrame{
 		button4.setLocation(50, 300);
 		add(button4);
 		
-		
-		
 		setVisible(true);	
 	}
 	
