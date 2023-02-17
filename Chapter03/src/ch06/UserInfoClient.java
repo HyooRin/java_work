@@ -9,7 +9,7 @@ public class UserInfoClient {
 
 	// main --> 실행하는 코드 작성 ( 사용 쪽 코드)
 	public static void main(String[] args) {
-		
+	
 		// UserInfoOracleDao 만들어 주세요
 		// 스캐너를 통해서 사용자 이름 사용자 비번 입력받기
 		Scanner scanner = new Scanner(System.in);

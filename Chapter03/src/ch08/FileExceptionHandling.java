@@ -8,9 +8,7 @@ public class FileExceptionHandling {
 	public static void main(String[] args) {
 		
 		// 파일 <-- IO 클래스
-		FileInputStream fis = null;
-		
-		
+		FileInputStream fis = null;		
 		
 //		try {
 //			fis = new FileInputStream("temp"); // <-- 예외 발생할 수 있는 코드 	
@@ -18,8 +16,7 @@ public class FileExceptionHandling {
 //			System.out.println("temp 라는 파일이 없습니다");
 //		}
 		
-		//try-catch-finally
-		
+		//try-catch-finally		
 		try {
 			fis = new FileInputStream("test1.txt");
 			return;
@@ -34,7 +31,6 @@ public class FileExceptionHandling {
 			// 심지어 return 키워드를 만나더라도 수행이 된다 !! 아주 강력한 녀석
 			System.out.println("fianlly 수행");
 		}
-
 		System.out.println("비정상 종료되지 않았어요!");
 	}// end of main
 

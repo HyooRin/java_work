@@ -15,8 +15,7 @@ public class MyException {
 			System.out.println("result: " + result);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}		
 
 	}// end of main
 

@@ -1,6 +1,7 @@
 package ch06;
 
 import java.awt.Color;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -42,11 +43,9 @@ public class ColorChange extends JFrame implements ActionListener{
 		
 	}
 	private void addEventListener() {
-		// this --> ClorChange --> ActioListener 타입으로 볼 수 있다.
+		// this --> ClorChange --> ActionListener 타입으로 볼 수 있다.
 		button1.addActionListener(this);
-		button2.addActionListener(this);
-
-		
+		button2.addActionListener(this);		
 	}
 	
 	//테스트 코드

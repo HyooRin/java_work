@@ -13,7 +13,6 @@ public class FileExceptionHandling2 {
 		} catch (FileNotFoundException e) {
 			System.out.println("파일이 없네요");
 		}
-
 	}// end of main
 
 }// end of class
@@ -25,8 +24,7 @@ class MyFile {
 	// 알아서 구현해!! (강제성 생김)
 	public void inputData(String str) throws FileNotFoundException {
 		
-		FileInputStream fis;
-		
+		FileInputStream fis;		
 		fis = new FileInputStream("test1.txt");
 		
 	}

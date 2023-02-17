@@ -5,7 +5,8 @@ import ch03.MyFrame2;
 public class MainTest1 {
 
 	public static void main(String[] args) {
-		new MyImageFrame2();
+		//new MyImageFrame();
+		//new MyImageFrame2();
 
 	}
 

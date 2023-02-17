@@ -13,10 +13,8 @@ public class ArrayExceptionHandling {
 			  System.out.println(arr[i]);
 		    }			
 		}catch(Exception e) {
-			System.out.println("개발자야 인덱스 길이 모르니?!");
-			
-		}
-		
+			System.out.println("개발자야 인덱스 길이 모르니?!");			
+		}		
 		System.out.println("비정상 종료되지 않았습니다");
 
 	} // end of main

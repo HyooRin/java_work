@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class ColorChangeFrame extends JFrame implements ActionListener{
+public class ColorChangeFrame extends JFrame implements ActionListener {
 	
 	// 이벤트 리스너에 대한 개념을 알자
 	 private JButton button1;
@@ -43,8 +43,7 @@ public class ColorChangeFrame extends JFrame implements ActionListener{
 		// this -> ColorChangeFrame은 다형성이 적용되어서
 		// ActionListener 타입으로도 바라볼 수 있다.
 		// 이벤트 리스너 등록 
-		button1.addActionListener(this);
-		
+		button1.addActionListener(this);		
 		button2.addActionListener(this);
 		button3.addActionListener(this);
 	}
@@ -59,9 +58,7 @@ public class ColorChangeFrame extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		System.out.println("actionPerformed 메소드 호출됨");
 		System.out.println(e.toString());
-		this.setBackground(Color.blue);
-		
-	}
-	
+		this.setBackground(Color.blue);		
+	}	
 
 }// end of class
