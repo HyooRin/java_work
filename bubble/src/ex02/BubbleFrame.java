@@ -1,4 +1,4 @@
-package ex01;
+package ex02;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -58,13 +58,30 @@ public class BubbleFrame extends JFrame{
 				default:
 					break;
 				}
+			}// end of KeyPressed
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				switch (e.getKeyCode()) {
+				case KeyEvent.VK_LEFT:
+					// 왼쪽 버튼을 떼면 player는 멈춰야 해
+					player.setLeft(false);
+					break;
+				case KeyEvent.VK_RIGHT:
+					// 오른쪽 버튼을 떼면 player는 멈춰야 해
+					player.setRight(false);
+					break;
+
+				default:
+					break;
+				}
 			}
 		});
 		
 	}
 	
 	public static void main(String[] args) {
-		//new BubbleFrame();
+		new BubbleFrame();
 		
 	}// end of main
 	
