@@ -1,6 +1,7 @@
 package ex04;
 
 import java.awt.Color;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class BackgroundPlayerService implements Runnable {
 			
 			int bottomColorLeft = image.getRGB(player.getX() + 10 , player.getY() + 55 );
 			// -65535, -1677696, -1
-			int bottomColorRight = image.getRGB(player.getX() + 45, player.getX() + 55 );
+			int bottomColorRight = image.getRGB(player.getX() + 45, player.getY() + 55 );
 			// 하얀색이 아니면 바닥이다
 			if(bottomColorLeft + bottomColorRight != -2){
 				System.out.println("여기는 바닥입니다.");
@@ -74,7 +75,7 @@ public class BackgroundPlayerService implements Runnable {
 			}
 			
 			try {
-				Thread.sleep(2);
+				Thread.sleep(3);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

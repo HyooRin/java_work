@@ -208,6 +208,13 @@ public class Player extends JLabel implements Moveable{
 					setLocation(x, y);
 					down = false;
 				}// end of while
+				
+				try {
+					Thread.sleep(3);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			
 				
 			}
