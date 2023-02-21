@@ -1,4 +1,4 @@
-package ex01EX;
+package ex02EX;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -9,14 +9,34 @@ public class Player extends JLabel implements Moveable{
 	private int y;
 	private ImageIcon playerR, playerL;
 	
-	public Player() {
+	private boolean left;
+	private boolean right;
+	private boolean up;
+	private  boolean down;
+	
+	private final int SPEED = 4;
+	private final int JUMPSPEED = 2;
+	
+	public void Player() {
 		initData();
 		setInitLayout();
 	}
-	
+
+	public void setLeft(boolean left) {
+		this.left = left;
+	}
+
+	public void setRight(boolean right) {
+		this.right = right;
+	}
+
 	private void initData() {
 		playerR = new ImageIcon("images/playerR.png");
 		playerL = new ImageIcon("images/playerL.png");
+		left = false;
+		right = false;
+		up = false;
+		down = false;
 		
 	}
 	
@@ -32,9 +52,9 @@ public class Player extends JLabel implements Moveable{
 
 	@Override
 	public void left() {
-		setIcon(playerL);
-		x = x - 10;
-		setLocation(x, y);		
+		left = true;
+		
+
 	}
 
 	@Override

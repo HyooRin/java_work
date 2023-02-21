@@ -3,34 +3,33 @@ package ch03;
 
 public class Customer {
 	
-	private int id;
 	private String name;
-	private String email;
-	private String phone;
-    //List<coffee> orders;
+	private int balance;
 	
-	public Customer(int id, String name, String email, String phone) {
-		this.id = id;
+	public Customer(String name, int balance ) {
 		this.name = name;
-		this.email = email;
-		this.phone = phone;
-	}
-
-	public int getId() {
-		return id;
+		this.balance = balance;
 	}
 
 	public String getName() {
 		return name;
+	}	
+
+	public int getBalance() {
+		return balance;
+	}
+	
+	public void buyCoffee(Coffee coffee) {
+		if(balance >= coffee.getPrice()) {
+			balance -= coffee.getPrice();
+		}
 	}
 
-	public String getEmail() {
-		return email;
-	}
+	
+	
+	
 
-	public String getPhone() {
-		return phone;
-	}
+
 	
 	
 

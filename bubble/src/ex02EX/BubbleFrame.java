@@ -1,4 +1,4 @@
-package ex01EX;
+package ex02EX;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;

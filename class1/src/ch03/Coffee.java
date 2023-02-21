@@ -2,27 +2,27 @@ package ch03;
 
 public class Coffee {
 	
-	private int id;
 	private String name;
-	private double price;
+	private int price;
 	
-	public Coffee(int id, String name, double price) {
-		this.id = id;
+	public Coffee( String name, int price) {
 		this.name = name;
 		this.price = price;		
-	}
-
-	public int getId() {
-		return id;
 	}
 
 	public String getName() {
 		return name;
 	}
-
-	public double getPrice() {
+	
+	public int getPrice() {
 		return price;
 	}
+
+
+	
+	
+
+
 	
 	
 
