@@ -1,10 +1,12 @@
-package ex07;
+package ex08;
 
 import javax.swing.ImageIcon;
 
 import javax.swing.JLabel;
 
 public class Player extends JLabel implements Moveable{
+	
+	BubbleFrame mContext;
 	
 	private int x;
 	private int y;
@@ -28,7 +30,8 @@ public class Player extends JLabel implements Moveable{
 	private final int SPEED = 4;
 	private final int JUMPSPEED = 2;
 	
-	public Player() {
+	public Player(BubbleFrame mContext) {
+		this.mContext = mContext;
 		initData();
 		setInitLayout();
 		
@@ -231,20 +234,25 @@ public class Player extends JLabel implements Moveable{
 				while(down) {
 					y = y + JUMPSPEED;
 					setLocation(x, y);
-					down = false; /// 확인
 					try {
 						Thread.sleep(3);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-				}// end of while
-				
-
-			
+				}// end of while			
+				down = false;
 				
 			}
 		}).start();
+		
+	}
+	
+	public void attack() {
+		
+		Bubble bubble = new Bubble(this);
+		// 부모에 add();
+		mContext.add(bubble);
 		
 	}
 

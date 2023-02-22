@@ -29,7 +29,7 @@ public class Player extends JLabel implements Moveable{
 		setInitLayout();
 		
 	}
-	//gettter 메서드 추가 left, right, isLeftWallCrash  isRightWallCrash
+	
 	
 	
 	//setter 메서드 만들기 left, right
@@ -40,6 +40,7 @@ public class Player extends JLabel implements Moveable{
 	public void setRight(boolean right) {
 		this.right = right;
 	}
+	//gettter 메서드 추가 isleft, isright, isLeftWallCrash  isRightWallCrash
 	
 	public boolean isLeftWallCrash() {
 		return leftWallCrash;
