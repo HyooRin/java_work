@@ -1,13 +1,21 @@
-package ex09;
+package ex11;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class Enemy extends JLabel implements Moveable{
 	
+	private BubbleFrame mContext;
+	
+	// 살아있는 상태(0), 물방울에 죽은 상태(1)
+	private int state;
+	
 	// 위치상태
 	private int x;
 	private int y;
+	
+	// 적군 방향
+	EnemyWay enemyWay;
 	
 	// 움직임 상태
 	private boolean left;
@@ -22,18 +30,119 @@ public class Enemy extends JLabel implements Moveable{
 	// 이미지 
 	private ImageIcon enemyR, enemyL;
 	
-	// 적군 방향
-	EnemyWay enemyWay;
-	
-	public Enemy() {
+	public Enemy(BubbleFrame mContext, EnemyWay enemyWay) {
+		this.mContext = mContext;
 		initData();
 		setInitLayout();
+		initBackgroundEnemyService();
+		initEnemyDirection(enemyWay);
+	}
 		
-		// 지울 예정
-		//left();	
-		//right();
-		up();
+	public BubbleFrame getmContext() {
+		return mContext;
+	}
+	
+	public void setmContext(BubbleFrame mContext) {
+		this.mContext = mContext;
+	}
+	
+	public int getState() {
+		return state;
+	}
+	
+	public void setState(int state) {
+		this.state = state;
+	}
+	
+	public int getX() {
+		return x;
+	}
 
+	public void setX(int x) {
+		this.x = x;
+	}
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public EnemyWay getEnemyWay() {
+		return enemyWay;
+	}
+	public void setEnemyWay(EnemyWay enemyWay) {
+		this.enemyWay = enemyWay;
+	}
+	
+	public boolean isLeft() {
+		return left;
+	}
+
+	public void setLeft(boolean left) {
+		this.left = left;
+	}
+	public boolean isRight() {
+		return right;
+	}
+
+	public void setRight(boolean right) {
+		this.right = right;
+	}
+
+	public boolean isUp() {
+		return up;
+	}
+
+	public void setUp(boolean up) {
+		this.up = up;
+	}
+
+	public boolean isDown() {
+		return down;
+	}
+
+	public void setDown(boolean down) {
+		this.down = down;
+	}
+
+	public ImageIcon getEnemyR() {
+		return enemyR;
+	}
+
+	public void setEnemyR(ImageIcon enemyR) {
+		this.enemyR = enemyR;
+	}
+
+	public ImageIcon getEnemyL() {
+		return enemyL;
+	}
+
+	public void setEnemyL(ImageIcon enemyL) {
+		this.enemyL = enemyL;
+	}
+	public int getSPEED() {
+		return SPEED;
+	}
+
+	public int getJUMPSPEED() {
+		return JUMPSPEED;
+	}
+	
+	private void initEnemyDirection(EnemyWay enemyWay) {
+		if(EnemyWay.RIGHT == enemyWay) {
+			enemyWay = EnemyWay.RIGHT;
+			setIcon(enemyR);
+			right();
+		}else {
+			enemyWay = EnemyWay.LEFT;
+			setIcon(enemyL);
+			left();
+		}
+	}
+	private void initBackgroundEnemyService() {
+		new Thread(new BackgroundEnemyService(this)).start();
 	}
 	
 	private void initData() {
@@ -44,9 +153,9 @@ public class Enemy extends JLabel implements Moveable{
 		left = false;
 		right = false;
 		up = false;
-		down = false;
-		
+		down = false;		
 		enemyWay = EnemyWay.LEFT;
+		state = 0;
 		
 		
 	}
@@ -54,11 +163,10 @@ public class Enemy extends JLabel implements Moveable{
 		setIcon(enemyL);
 		setSize(50, 50);
 		setLocation(x, y);		
-	}
+	}	
 
 	@Override
-	public void left() {
-		
+	public void left() {		
 		enemyWay = EnemyWay.LEFT;
 		left = true;
 		new Thread(new Runnable() {
@@ -67,6 +175,7 @@ public class Enemy extends JLabel implements Moveable{
 			public void run() {
 				while(true) {					
 					x = x - SPEED;
+					setIcon(enemyL);
 					setLocation(x, y);
 					try {
 						Thread.sleep(10);
@@ -92,6 +201,7 @@ public class Enemy extends JLabel implements Moveable{
 			public void run() {
 				while(true) {					
 					x = x + SPEED;
+					setIcon(enemyR);
 					setLocation(x, y);
 					try {
 						Thread.sleep(10);

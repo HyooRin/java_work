@@ -1,9 +1,13 @@
-package ex09;
+package ex10;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class Enemy extends JLabel implements Moveable{
+	
+	// 0, 1 
+	// 살아있는 상태, 물방울에 죽은 상태
+	private int state;
 	
 	// 위치상태
 	private int x;
@@ -28,12 +32,6 @@ public class Enemy extends JLabel implements Moveable{
 	public Enemy() {
 		initData();
 		setInitLayout();
-		
-		// 지울 예정
-		//left();	
-		//right();
-		up();
-
 	}
 	
 	private void initData() {
@@ -44,9 +42,9 @@ public class Enemy extends JLabel implements Moveable{
 		left = false;
 		right = false;
 		up = false;
-		down = false;
-		
+		down = false;		
 		enemyWay = EnemyWay.LEFT;
+		state = 0;
 		
 		
 	}
@@ -54,6 +52,14 @@ public class Enemy extends JLabel implements Moveable{
 		setIcon(enemyL);
 		setSize(50, 50);
 		setLocation(x, y);		
+	}
+	
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
 	}
 
 	@Override
