@@ -57,7 +57,7 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public int insert(UserDTO dto) {
 
-		String sqlFormat = "INSERT INTO " + "	                     usetbl(username, birthYear, addr, mobile) "
+		String sqlFormat = "INSERT INTO " + "	 usetbl(username, birthYear, addr, mobile) "
 				+ "                     VALUES('%s', '%s', '%s', '%s') ";
 		String sql = String.format(sqlFormat, dto.getUsername(), dto.getBirthYear(), dto.getAddr(), dto.getMobile());
 		Connection conn = dbClient.getConnection();
